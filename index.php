@@ -42,4 +42,5 @@
     ]);
 
     echo $html;
+    echo 1;
 ?>
