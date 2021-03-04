@@ -8,7 +8,7 @@
         {
             addMessage($fields);
             $id = getLastId();
-            header("Location: index.php?c=message&id=$id");
+            header("Location: " . BASE_URL);
             exit();
         }
     }
