@@ -65,7 +65,11 @@ return (function ()
             'test' => "/^editCat\/($intGT0)\/?$/",
             'controller' => 'catalog/editCat',
             'params' => ['id' => 1]
-        ]
+        ],
+        [
+			'test' => "/^auth\/login\/?$/",
+			'controller' => 'auth/login'
+		]
     ];
 })();
 ?>

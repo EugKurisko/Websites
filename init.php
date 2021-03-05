@@ -13,4 +13,6 @@
 
     include_once('model/messages.php');
     include_once('model/categories.php');
+    include_once('model/users.php');
+    include_once('model/sessions.php');
 ?>

@@ -34,6 +34,9 @@
 				<li class="nav-item">
 					<a class="nav-link" href="<?=BASE_URL?>addCat">Add Category</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?=BASE_URL?>auth/login">Login</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
