@@ -34,9 +34,15 @@
 				<li class="nav-item">
 					<a class="nav-link" href="<?=BASE_URL?>addCat">Add Category</a>
 				</li>
+				<?php if(!$_SESSION['logged']):?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?=BASE_URL?>auth/login">Login</a>
 				</li>
+				<?php else:?>
+					<li class="nav-item">
+					<a class="nav-link" href="<?=BASE_URL?>auth/logout">Logout</a>
+				</li>
+				<?php endif;?>
 			</ul>
 		</div>
 	</nav>

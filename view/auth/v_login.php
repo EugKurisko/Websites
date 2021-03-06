@@ -10,7 +10,7 @@
 	<div class="form-check">
 		<input class="form-check-input" type="checkbox" id="login-remember" name="remember">
 		<label class="form-check-label" for="login-remember">
-			Remember auth to 1 month
+			Remember authentification for 1 month
 		</label>
 	</div>
 	<hr>

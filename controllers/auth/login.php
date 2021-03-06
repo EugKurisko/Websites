@@ -17,6 +17,7 @@
                 {
                     setcookie('token', $token, time() + 3600 * 24 * 30, BASE_URL);
                 }
+                $_SESSION['logged'] = true;
                 header('Location: ' . BASE_URL);
                 exit();
             }
@@ -25,6 +26,7 @@
     else
     {
         $authErr = false;
+        $_SESSION['logged'] = false;
     }
     $pageTitle = 'Login';
     $pageContent = template('auth/v_login', ['authErr' => $authErr]);

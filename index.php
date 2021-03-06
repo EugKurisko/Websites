@@ -1,11 +1,14 @@
 <?php
     //take controller name and give him controll
     session_start();
-    
+    $_SESSION['logged'] = false;
     include_once 'init.php';
-
     $user = getAuthUser();
-    var_dump($user);
+    if($user !== null)
+    {
+        $_SESSION['logged'] = true;
+    }
+
     $pageCanonical = HOST . BASE_URL;
     $routs = include('routes.php');
     $url = $_GET['querysystemurl'] ?? '';
@@ -35,7 +38,8 @@
     $html = template('base/v_main', [
         'title' => $pageTitle,
         'content' => $pageContent,
-        'canonical' => $pageCanonical
+        'canonical' => $pageCanonical,
+        'loggedIn' => $_SESSION['logged']
     ]);
 
     echo $html;
