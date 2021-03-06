@@ -10,6 +10,3 @@ if($_SERVER['REQUEST_METHOD'] == 'GET')
     header('Location: ' . BASE_URL);
     exit();
 }
-
-$pageTitle = 'Logout';
-$pageContent = template('auth/v_logout');    

@@ -1,7 +1,9 @@
 <div class="row">
-	<aside class="col col-12 col-md-3">
-		<?=$left?>
-	</aside>
+	<?php if($left !== null) :?>
+		<aside class="col col-12 col-md-3">
+			<?=$left?>
+		</aside>
+	<?php endif;?>
 	<main class="col col-12 col-md-9">
 		<h1><?=$title?></h1>
 		<hr>

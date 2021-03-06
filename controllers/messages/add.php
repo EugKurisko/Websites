@@ -9,6 +9,7 @@
     if($_SERVER["REQUEST_METHOD"] === "POST")
     {
         $fields = extractFields($_POST, ['name', 'text', 'id_cat']);
+        $fields['id_user'] = $user['id_user'];
         $validateErrors = messageValidate($fields);
         if(empty($validateErrors))
         {
@@ -28,4 +29,3 @@
         'cats' => $cats, 
         'validateErrors' => $validateErrors
         ]);
-?>

@@ -40,7 +40,9 @@
 				</li>
 				<?php else:?>
 					<li class="nav-item">
-					<a class="nav-link" href="<?=BASE_URL?>auth/logout">Logout</a>
+					<a class="nav-link" href="<?=BASE_URL?>auth/logout">
+						Logout (<?=$user['name']?>)
+					</a>
 				</li>
 				<?php endif;?>
 			</ul>

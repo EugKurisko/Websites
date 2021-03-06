@@ -1,6 +1,5 @@
 <?php
     $messages = messagesAll();
-    //$cats = categoriesAll();
     if(empty($messages))
     {
         include_once 'view/errors/v_404.php';
@@ -9,6 +8,5 @@
     $isTable = ($_GET['view'] ?? '') === 'table';//index.php?view-table
     $template = $isTable ? 'v_all_table' : 'v_all';
     $pageTitle = 'All messages';
-    $pageContent = template($template, ['messages' => $messages]);
-    //include("view/$template.php");
+    $pageContent = template($template, ['messages' => $messages, 'user' => $user]);
 ?>

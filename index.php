@@ -39,7 +39,8 @@
         'title' => $pageTitle,
         'content' => $pageContent,
         'canonical' => $pageCanonical,
-        'loggedIn' => $_SESSION['logged']
+        'loggedIn' => $_SESSION['logged'],
+        'user' => $user
     ]);
 
     echo $html;

@@ -36,7 +36,7 @@
 
     function addMessage(array $fields) : bool
     {
-        $sql = "INSERT INTO message (name, text, id_cat) VALUES (:name, :text, :id_cat)";
+        $sql = "INSERT INTO message (name, text, id_cat, id_user) VALUES (:name, :text, :id_cat, :id_user)";
         dbQuery($sql, $fields);
         return true;
     }
@@ -60,4 +60,11 @@
         $db = dbInstance();
         return $db->lastInsertId();
     }
-?>
+
+    function getUserIdFromMessage(int $id) : int
+    {
+        $sql = "SELECT id_user FROM message WHERE id = :id";
+        $query = dbQuery($sql, ['id' => $id]);
+        $result = $query->fetch();
+        return $result['id_user'];
+    }
