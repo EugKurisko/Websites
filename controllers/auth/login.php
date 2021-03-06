@@ -15,7 +15,7 @@
                 $_SESSION['token'] = $token;
                 if($remember)
                 {
-                    setcookie('token', $token, time() + 3600 * 24 * 30);
+                    setcookie('token', $token, time() + 3600 * 24 * 30, BASE_URL);
                 }
                 header('Location: ' . BASE_URL);
                 exit();

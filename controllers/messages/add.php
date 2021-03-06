@@ -1,4 +1,10 @@
 <?php
+    if($user === null)
+    {
+        header("Location: " . BASE_URL . "auth/login");
+        exit();
+    }
+
     $cats = categoriesAll();
     if($_SERVER["REQUEST_METHOD"] === "POST")
     {

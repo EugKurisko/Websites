@@ -1,14 +1,11 @@
 <?php
     //take controller name and give him controll
+    session_start();
+    
     include_once 'init.php';
-    //routing
-    /*$uri = $_SERVER['REQUEST_URI'];
-    $badUrl = BASE_URL . 'index.php';
 
-    if(strpos($uri, $badUrl) === 0)
-    {
-        $cname = 'errors/e404'
-    }*/
+    $user = getAuthUser();
+    var_dump($user);
     $pageCanonical = HOST . BASE_URL;
     $routs = include('routes.php');
     $url = $_GET['querysystemurl'] ?? '';
@@ -42,4 +39,3 @@
     ]);
 
     echo $html;
-?>
