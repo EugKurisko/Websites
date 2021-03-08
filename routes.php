@@ -73,6 +73,10 @@ return (function ()
         [
 			'test' => "/^auth\/logout\/?$/",
 			'controller' => 'auth/logout'
+		],
+        [
+			'test' => "/^auth\/register\/?$/",
+			'controller' => 'auth/register'
 		]
     ];
 })();

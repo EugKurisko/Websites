@@ -45,6 +45,9 @@
 					</a>
 				</li>
 				<?php endif;?>
+				<li class="nav-item">
+					<a class="nav-link" href="<?=BASE_URL?>auth/register">Register</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
